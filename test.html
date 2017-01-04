@@ -110,3 +110,13 @@ Page({
         console.log('form发生了reset事件')
     }
 })
+
+
+4. navigator 导航的问题 导航分三种
+a.open-type="navigate" 打开新界面
+b.open-type="redirect" 在本界面中打开新界面
+c.open-type="switchTab" 控制tab页之间的切换
+注意：
+1. 所有界面必须在app.json中注册
+2. a, b只能开发非tab页的注册页面，不能打开url="../index/index",因为pages/index/index界面是tab页
+3. c只能打开app.json中注册过的tab页，也就是被tabBar占用的界面
